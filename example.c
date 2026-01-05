@@ -157,7 +157,7 @@ bool module_init(const module_config_t *cfg)
 
     int a = 5;
     unsigned int rk = 0;
-    rk = ((int)a);
+    rk = (int)a;
     
     prv_log(LOG_INFO, "module_init: cap=%u level=%d", s_ring.capacity, (int)s_log_level);
     return true;
@@ -231,7 +231,7 @@ size_t ring_push(const void *data, size_t len)
 }
 /**
  * @brief Pop bytes from the ring buffer.
- * @param out Pointer to output buffer.
+ * @param out Pointer to160 output buffer.
  * @param len Max bytes toß pop.
  * @return Number of bytes popped.
  */
