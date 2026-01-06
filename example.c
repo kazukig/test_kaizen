@@ -53,7 +53,7 @@ TYPDEF_ALIAS(my_i8_t, int8_t);
 /* static helper functions to create contexts */
 static u8 make_mod(u8 a, u8 b) {
     /* unsigned不一致 */
-    return (u8)((a + b + 4U) % 256U);
+    return (u8)((a + b + 4) % 256);
 }
 
 static i8 make_signed_op(i8 a, i8 b) {
@@ -69,7 +69,7 @@ u8 mix_signed_unsigned(u8 ua, i8 ib) {
 
 u8 compare_and_select(u8 a, i8 b) {
     /* unsigned不一致 */
-    if (a < (uint8_t)b) { /* comparing unsigned to signed */
+    if (a <b) { /* comparing unsigned to signed */
         return MAKE_U8(0);
     } else {
         return MAKE_U8(1);
