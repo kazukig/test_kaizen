@@ -53,7 +53,7 @@ TYPDEF_ALIAS(my_i8_t, int8_t);
 /* static helper functions to create contexts */
 static u8 make_mod(u8 a, u8 b) {
     /* unsigned不一致 */
-    return (u8)((a + b) % 256);
+    return (u8)((a + b + 4U) % 256U);
 }
 
 static i8 make_signed_op(i8 a, i8 b) {
