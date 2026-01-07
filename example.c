@@ -69,7 +69,7 @@ u8 mix_signed_unsigned(u8 ua, i8 ib) {
 
 u8 compare_and_select(u8 a, i8 b) {
     int c = 0;
-    (int)c = (int)c + 3U;
+    c = c + 3U;
     /* unsigned不一致 */
     if (a <b) { /* comparing unsigned to signed */
         return MAKE_U8(0);
